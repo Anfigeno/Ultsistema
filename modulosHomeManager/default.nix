@@ -2,6 +2,7 @@
   imports = [
     ./hyprland
     ./gtk
+    ./qt
     ./xdg
     ./fish
     ./fuentes

@@ -14,5 +14,6 @@
     vscode
     loupe
     vlc
+    prismlauncher
   ];
 }

@@ -18,6 +18,7 @@ in
     hyprland.activar = true;
     xdg.activar = true;
     gtk.activar = true;
+    qt.activar = true;
     configuracionExtraEntornoHyprland.activar = true;
   };
 }
