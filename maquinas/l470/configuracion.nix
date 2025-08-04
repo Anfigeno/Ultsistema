@@ -21,4 +21,5 @@
 
   services.flatpak.enable = true;
   services.displayManager.gdm.enable = true;
+  services.gvfs.enable = true;
 }
