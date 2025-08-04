@@ -21,8 +21,13 @@ in
       };
 
       theme = {
-        name = "Orchis";
+        name = "Orchis-Purple";
         package = pkgs.orchis-theme;
+      };
+
+      iconTheme = {
+        name = "Reversal";
+        package = pkgs.reversal-icon-theme;
       };
     };
   };
