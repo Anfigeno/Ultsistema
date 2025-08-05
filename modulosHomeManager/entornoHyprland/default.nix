@@ -19,6 +19,7 @@ in
     xdg.activar = true;
     gtk.activar = true;
     qt.activar = true;
+    wofi.activar = true;
     configuracionExtraEntornoHyprland.activar = true;
   };
 }
