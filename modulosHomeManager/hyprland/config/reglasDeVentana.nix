@@ -14,6 +14,10 @@ let
         clase = "zen";
         titulo = "Zen - Choose User Profile";
       }
+      {
+        clase = "zen-beta";
+        titulo = "Zen - Choose User Profile";
+      }
     ];
     porClase = [ "io.bassi.Amberol" ];
   };

@@ -1,8 +1,13 @@
-{ inputs, pkgs, maquina, usuario }: 
+{
+  inputs,
+  pkgs,
+  maquina,
+  usuario,
+}:
 
 {
   imports = [
-    (import ./${maquina}/home.nix { inherit pkgs; })
+    (import ./${maquina}/home.nix { inherit pkgs inputs; })
     ../modulosHomeManager
   ];
 

@@ -1,7 +1,8 @@
-{ pkgs }:
+{ pkgs, inputs }:
 
 {
   imports = [
+    inputs.zen-browser.homeModules.beta
     {
       config.modulosHomeManager = {
         entornoHyprland.activar = true;
@@ -16,4 +17,6 @@
     vlc
     prismlauncher
   ];
+
+  programs.zen-browser.enable = true;
 }
