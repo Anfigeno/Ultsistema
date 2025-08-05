@@ -8,7 +8,7 @@
     :monitor 0
     :geometry (geometry
         :height "100%"
-        :anchor "left center")
+        :anchor "right center")
     :stacking "fg"
     :windowtype "dock"
     :focusable "none"
