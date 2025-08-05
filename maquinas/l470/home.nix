@@ -19,4 +19,5 @@
   ];
 
   programs.zen-browser.enable = true;
+  programs.vesktop.enable = true;
 }
