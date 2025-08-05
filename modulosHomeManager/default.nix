@@ -1,5 +1,6 @@
 {
   imports = [
+    ./zen
     ./eww
     ./wofi
     ./hyprland

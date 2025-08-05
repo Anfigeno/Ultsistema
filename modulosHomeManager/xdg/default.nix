@@ -34,6 +34,30 @@ in
       configHome = "${config.home.homeDirectory}/.config";
       cacheHome = "${config.home.homeDirectory}/.cache";
       stateHome = "${config.home.homeDirectory}/.local/state";
+
+      desktopEntries = {
+        zen-perfiles = lib.mkIf config.modulosHomeManager.zen.activar {
+          name = "Zen Perfiles";
+          comment = "Elige tu perfil y abre Zen Browser";
+          exec = "zen-beta -p";
+          icon = "zen-beta";
+          mimeType = [
+            "text/html"
+            "x-scheme-handler/http"
+            "x-scheme-handler/https"
+            "x-scheme-handler/about"
+            "x-scheme-handler/unknown"
+          ];
+        };
+      };
+
+      mimeApps = {
+        enable = true;
+        defaultApplications = {
+          "inode/directory" = "org.gnome.Nautilus.desktop";
+          "application/x-gnome-saved-search" = "org.gnome.Nautilus.desktop";
+        };
+      };
     };
   };
 }

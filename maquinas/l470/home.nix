@@ -2,9 +2,9 @@
 
 {
   imports = [
-    inputs.zen-browser.homeModules.beta
     {
       config.modulosHomeManager = {
+        zen.activar = true;
         entornoHyprland.activar = true;
         entornoDeDesarrollo.activar = true;
       };
@@ -18,7 +18,6 @@
     prismlauncher
   ];
 
-  programs.zen-browser.enable = true;
   programs.vesktop.enable = true;
 
   services.polkit-gnome.enable = true;
