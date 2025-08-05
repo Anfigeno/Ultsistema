@@ -1,5 +1,6 @@
 {
   imports = [
+    ./eww
     ./wofi
     ./hyprland
     ./gtk

@@ -20,6 +20,7 @@ in
     gtk.activar = true;
     qt.activar = true;
     wofi.activar = true;
+    eww.activar = true;
     configuracionExtraEntornoHyprland.activar = true;
   };
 }
