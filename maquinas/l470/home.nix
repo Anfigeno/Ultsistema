@@ -20,4 +20,6 @@
 
   programs.zen-browser.enable = true;
   programs.vesktop.enable = true;
+
+  services.polkit-gnome.enable = true;
 }

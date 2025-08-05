@@ -16,6 +16,6 @@
                     :space-evenly false
                     :orientation "v"
                     :class "botones"
-                    (button :class "boton-apagar" :onclick `systemctl poweroff` "⏻")
-                    (button :class "boton-reiniciar" :onclick `systemctl reboot` "󰑓")))
+                    (button :class "boton-apagar" :onclick `systemctl poweroff` "⏻ ")
+                    (button :class "boton-reiniciar" :onclick `systemctl reboot` "󰑓 ")))
                 (label :class "indicador-menu-de-poder" :text ""))))
