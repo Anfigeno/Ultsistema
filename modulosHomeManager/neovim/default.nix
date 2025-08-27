@@ -91,6 +91,7 @@ in
       vimAlias = true;
       defaultEditor = true;
       extraLuaConfig = builtins.readFile ./opciones.lua;
+      extraPackages = with pkgs; [ wl-clipboard ];
       plugins = with pkgs.vimPlugins; [
         nvim-dap-ui
         nvim-dap-go
