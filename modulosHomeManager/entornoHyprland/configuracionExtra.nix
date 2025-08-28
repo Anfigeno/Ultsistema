@@ -1,14 +1,24 @@
-{ pkgs, lib, config, ... }:
-let cfg = config.modulosHomeManager.configuracionExtraEntornoHyprland;
-in {
+{
+  pkgs,
+  lib,
+  config,
+  ...
+}:
+let
+  cfg = config.modulosHomeManager.configuracionExtraEntornoHyprland;
+in
+{
   options.modulosHomeManager.configuracionExtraEntornoHyprland = {
-    activar = lib.mkEnableOption
-      "Activa el módulo de configuracionExtraEntornoHyprland";
+    activar = lib.mkEnableOption "Activa el módulo de configuracionExtraEntornoHyprland";
   };
 
   config = lib.mkIf cfg.activar {
     # NOTA: Paquetes extra
-    home.packages = with pkgs; [ nautilus nautilus-open-any-terminal ];
+    home.packages = with pkgs; [
+      nautilus
+      nautilus-open-any-terminal
+      brightnessctl
+    ];
 
     services.swww.enable = true; # Utilidad de fondo de pantalla
     services.amberol.enable = true; # Reproductor de música minimalista
