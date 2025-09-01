@@ -13,6 +13,11 @@ local formateadores = {
 		args = { '"%:p"' },
 		stdin = 1,
 	},
+	qmlformat = {
+		exe = "qmlformat",
+		args = { '"%:p"' },
+		stdin = 1,
+	},
 }
 
 -- NOTA: JavaScript
@@ -30,5 +35,9 @@ vim.g.neoformat_astro_biome = formateadores.biome
 vim.g.neoformat_enabled_svelte = { "prettierd", "biome" }
 vim.g.neoformat_svelte_prettierd = formateadores.prettierd
 vim.g.neoformat_svelte_biome = formateadores.biome
+
+-- NOTA: Qml
+vim.g.neoformat_enabled_qml = { "qmlformat" }
+vim.g.neoformat_qml_qmlformat = formateadores.qmlformat
 
 vim.keymap.set("n", "<s-f>", "<cmd>Neoformat<cr>", { desc = "Formatea el buffer" })
