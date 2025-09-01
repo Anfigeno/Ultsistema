@@ -18,6 +18,7 @@
     vlc
     prismlauncher
     wasistlos
+    glib
   ];
 
   programs.vesktop.enable = true;
