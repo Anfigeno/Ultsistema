@@ -1,5 +1,6 @@
 {
   imports = [
+    ./quickshell
     ./zen
     ./eww
     ./wofi
