@@ -1,12 +1,13 @@
 { pkgs }:
-let audio = import ./scripts/audio.nix { inherit pkgs; };
-in [
+let
+  audio = import ./scripts/audio.nix { inherit pkgs; };
+in
+[
   "SUPER, RETURN, exec, ${pkgs.kitty}/bin/kitty"
   "SUPER, SPACE, exec, ${pkgs.wofi}/bin/wofi --show drun"
   "SUPER, e, exec, ${pkgs.nautilus}/bin/nautilus"
   ", Print, exec, ${pkgs.grim}/bin/grim - | ${pkgs.wl-clipboard}/bin/wl-copy"
-  ''
-    SHIFT, Print, exec, ${pkgs.grim}/bin/grim -g "$(${pkgs.slurp}/bin/slurp -d)" - | ${pkgs.wl-clipboard}/bin/wl-copy''
+  ''SHIFT, Print, exec, ${pkgs.grim}/bin/grim -g "$(${pkgs.slurp}/bin/slurp -d)" - | ${pkgs.wl-clipboard}/bin/wl-copy''
   "SUPER, p, exec, ${pkgs.cliphist}/bin/cliphist list | ${pkgs.wofi}/bin/wofi -S dmenu | ${pkgs.cliphist}/bin/cliphist decode | ${pkgs.wl-clipboard}/bin/wl-copy"
   "SUPER, m, exec, ${pkgs.wofi-emoji}/bin/wofi-emoji"
 
@@ -57,11 +58,28 @@ in [
   "SUPER+SHIFT, l, swapwindow, r"
   "SUPER+SHIFT, k, swapwindow, u"
   "SUPER+SHIFT, j, swapwindow, d"
-] ++
-# Navegación entre escritorios
-(builtins.concatLists (builtins.genList (i:
-  let ws = i + 1;
-  in [
-    "SUPER, code:1${toString i}, workspace, ${toString ws}"
-    "SUPER SHIFT, code:1${toString i}, movetoworkspace, ${toString ws}"
-  ]) 9))
+
+  # Crear/Alternar grupo con la ventana activa
+  "SUPER, g, togglegroup"
+
+  # Control de bloqueo de grupos
+  "SUPER+SHIFT, g, lockactivegroup, toggle"
+
+  # Navegación entre ventanas del grupo
+  "SUPER, Tab, changegroupactive, f"
+  "SUPER+SHIFT, Tab, changegroupactive, b"
+]
+++
+  # Navegación entre escritorios
+  (builtins.concatLists (
+    builtins.genList (
+      i:
+      let
+        ws = i + 1;
+      in
+      [
+        "SUPER, code:1${toString i}, workspace, ${toString ws}"
+        "SUPER SHIFT, code:1${toString i}, movetoworkspace, ${toString ws}"
+      ]
+    ) 9
+  ))

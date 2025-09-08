@@ -1,6 +1,13 @@
-{ pkgs, lib, config, ... }:
-let cfg = config.modulosHomeManager.hyprland;
-in {
+{
+  pkgs,
+  lib,
+  config,
+  ...
+}:
+let
+  cfg = config.modulosHomeManager.hyprland;
+in
+{
   options.modulosHomeManager.hyprland = {
     activar = lib.mkEnableOption "Activa el módulo de entoronoHyprland";
   };
@@ -21,6 +28,7 @@ in {
         decoration = import ./config/decoracion.nix;
         misc = import ./config/misc.nix;
         general = import ./config/general.nix;
+        group = import ./config/grupo.nix;
       };
     };
   };
