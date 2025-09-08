@@ -19,8 +19,14 @@
     bluetooth.enable = true;
   };
 
-  services.displayManager.gdm.enable = true;
-  services.gvfs.enable = true;
+  services = {
+    displayManager.gdm.enable = true;
+    gvfs.enable = true;
+    upower.enable = true;
+  };
+
+  programs.steam.enable = true;
+  hardware.steam-hardware.enable = true;
 
   networking.networkmanager = {
     enable = true;
