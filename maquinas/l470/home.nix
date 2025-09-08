@@ -22,7 +22,10 @@
     glib
   ];
 
-  programs.vesktop.enable = true;
+  programs = {
+    vesktop.enable = true;
+    obs-studio.enable = true;
+  };
 
   services = {
     polkit-gnome.enable = true;
