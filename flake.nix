@@ -24,7 +24,7 @@
         config.allowUnfree = true;
       };
 
-      maquinas = [ "l470" ];
+      maquinas = [ "l470" "h81m" ];
       usuario = "anfitrion";
     in
     {

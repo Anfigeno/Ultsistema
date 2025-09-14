@@ -7,6 +7,8 @@
     ./${maquina}/configuracion.nix
   ];
 
+  services.openssh.enable = true;
+
   home-manager = {
     useGlobalPkgs = true;
     useUserPackages = true;
