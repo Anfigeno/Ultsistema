@@ -17,6 +17,8 @@ in
       # Herramientas
       xclip
       sshfs
+      zip
+      unzip
 
       # Entornos de ejecución
       nodejs_20
