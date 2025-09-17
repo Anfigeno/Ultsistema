@@ -20,6 +20,9 @@
     prismlauncher
     wasistlos
     glib
+    cheese
+    jetbrains.idea-community
+    file-roller
   ];
 
   programs = {
