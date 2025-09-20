@@ -91,7 +91,10 @@ in
       vimAlias = true;
       defaultEditor = true;
       extraLuaConfig = builtins.readFile ./opciones.lua;
-      extraPackages = with pkgs; [ wl-clipboard ];
+      extraPackages = with pkgs; [
+        wl-clipboard
+        curl
+      ];
       plugins = with pkgs.vimPlugins; [
         nvim-dap-ui
         nvim-dap-go
@@ -215,9 +218,9 @@ in
         }
 
         {
-          plugin = kulala-nvim;
+          plugin = rest-nvim;
           type = "lua";
-          config = builtins.readFile ./complementos/kulala.lua;
+          config = builtins.readFile ./complementos/rest.lua;
         }
 
         {

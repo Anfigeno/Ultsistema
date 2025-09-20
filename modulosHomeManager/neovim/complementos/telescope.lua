@@ -14,8 +14,7 @@ require("telescope").setup({
 })
 
 local builtin = require("telescope.builtin")
-vim.keymap.set("n", "<space>ff", builtin.find_files, { desc = "Telescope find files" })
-vim.keymap.set("n", "<space>fg", builtin.live_grep, { desc = "Telescope live grep" })
-vim.keymap.set("n", "<space>fs", builtin.lsp_document_symbols, { desc = "Telescope simbolos" })
-vim.keymap.set("n", "<space>fR", builtin.lsp_workspace_symbols, { desc = "Telescope referencias" })
-vim.keymap.set("n", "<space>fr", builtin.lsp_references, { desc = "Telescope referencias" })
+vim.keymap.set("n", "<space>ff", builtin.find_files, { desc = "Telescope: Encontrar archivos" })
+vim.keymap.set("n", "<space>fg", builtin.live_grep, { desc = "Telescope: Grep" })
+vim.keymap.set("n", "<space>fs", builtin.lsp_document_symbols, { desc = "Telescope: Simbolos" })
+vim.keymap.set("n", "<space>fr", builtin.lsp_references, { desc = "Telescope: Encontrar referencias" })

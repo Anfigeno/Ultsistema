@@ -1,4 +1,3 @@
-local navic = require("nvim-navic")
 local colores = require("mestizo.paleta")
 
 local function obtener_icono()
