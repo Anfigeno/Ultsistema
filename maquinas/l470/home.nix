@@ -13,6 +13,7 @@
   ];
 
   home.packages = with pkgs; [
+    wpsoffice
     gedit
     vscode
     loupe

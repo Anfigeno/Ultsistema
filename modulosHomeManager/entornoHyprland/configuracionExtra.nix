@@ -18,6 +18,7 @@ in
       nautilus
       nautilus-open-any-terminal
       brightnessctl
+      wl-clipboard
     ];
 
     services.swww.enable = true; # Utilidad de fondo de pantalla
