@@ -242,9 +242,12 @@ in
         }
 
         {
-          plugin = nvim-notify;
+          plugin = fidget-nvim;
           type = "lua";
-          config = builtins.readFile ./complementos/notify.lua;
+          config = # lua
+            ''
+              require("fidget").setup()
+            '';
         }
 
         {
