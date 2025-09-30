@@ -96,6 +96,12 @@ in
         curl
       ];
       plugins = with pkgs.vimPlugins; [
+        {
+          plugin = ts-autotag-nvim;
+          type = "lua";
+          config = builtins.readFile ./complementos/ts-autotag.lua;
+        }
+
         nvim-dap-ui
         nvim-dap-go
         nvim-dap-virtual-text
