@@ -78,6 +78,12 @@ let
     repo = "Wansmer/symbol-usage.nvim";
   };
 
+  propio-fyler-nvim = deGithub {
+    rev = "2a53848c5c365a82389576c2b1ca31d9ff48a040";
+    ref = "main";
+    repo = "A7Lavinraj/fyler.nvim";
+    dependencies = [ pkgs.vimPlugins.nvim-web-devicons ];
+  };
 in
 {
   options.modulosHomeManager.neovim = {
@@ -96,6 +102,11 @@ in
         curl
       ];
       plugins = with pkgs.vimPlugins; [
+        {
+          plugin = propio-fyler-nvim;
+          type = "lua";
+          config = builtins.readFile ./complementos/fyler.lua;
+        }
         {
           plugin = ts-autotag-nvim;
           type = "lua";
