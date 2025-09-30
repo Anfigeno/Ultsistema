@@ -13,6 +13,7 @@ let
       ref,
       repo,
       dependencies ? [ ],
+      nvimSkipModules ? [ ],
     }:
     pkgs.vimUtils.buildVimPlugin {
       name = "${lib.strings.sanitizeDerivationName repo}";
@@ -21,7 +22,7 @@ let
         ref = ref;
         rev = rev;
       };
-      inherit dependencies;
+      inherit dependencies nvimSkipModules;
     };
 
   mestizo-nvim = deGithub {
@@ -82,7 +83,14 @@ let
     rev = "2a53848c5c365a82389576c2b1ca31d9ff48a040";
     ref = "main";
     repo = "A7Lavinraj/fyler.nvim";
-    dependencies = [ pkgs.vimPlugins.nvim-web-devicons ];
+    dependencies = with pkgs.vimPlugins; [
+      nvim-web-devicons
+      mini-icons
+    ];
+    nvimSkipModules = [
+      "fyler.explorer.ui"
+      "fyler.explorer"
+    ];
   };
 in
 {
@@ -384,13 +392,6 @@ in
           plugin = telescope-nvim;
           type = "lua";
           config = builtins.readFile ./complementos/telescope.lua;
-        }
-
-        nvim-web-devicons
-        {
-          plugin = neo-tree-nvim;
-          type = "lua";
-          config = builtins.readFile ./complementos/neotree.lua;
         }
 
         {
