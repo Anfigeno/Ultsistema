@@ -73,12 +73,6 @@ let
     repo = "CRAG666/code_runner.nvim";
   };
 
-  symbol-usage-nvim = deGithub {
-    rev = "e07c07dfe7504295a369281e95a24e1afa14b243";
-    ref = "main";
-    repo = "Wansmer/symbol-usage.nvim";
-  };
-
   propio-fyler-nvim = deGithub {
     rev = "2a53848c5c365a82389576c2b1ca31d9ff48a040";
     ref = "main";
@@ -91,6 +85,12 @@ let
       "fyler.explorer.ui"
       "fyler.explorer"
     ];
+  };
+
+  lensline-nvim = deGithub {
+    rev = "9ae1e4a4d47533dc5bba301e790dcda44ec62be6";
+    ref = "main";
+    repo = "oribarilan/lensline.nvim";
   };
 in
 {
@@ -111,10 +111,17 @@ in
       ];
       plugins = with pkgs.vimPlugins; [
         {
+          plugin = lensline-nvim;
+          type = "lua";
+          config = builtins.readFile ./complementos/lensline.lua;
+        }
+
+        {
           plugin = propio-fyler-nvim;
           type = "lua";
           config = builtins.readFile ./complementos/fyler.lua;
         }
+
         {
           plugin = ts-autotag-nvim;
           type = "lua";
@@ -143,12 +150,6 @@ in
             ''
               require("lazydev").setup()
             '';
-        }
-
-        {
-          plugin = symbol-usage-nvim;
-          type = "lua";
-          config = builtins.readFile ./complementos/symbol-usage.lua;
         }
 
         {
