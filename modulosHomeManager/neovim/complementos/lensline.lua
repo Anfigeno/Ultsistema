@@ -24,6 +24,14 @@ require("lensline").setup({
 					cache_max_files = 50,
 				},
 			},
+			style = {
+				separator = " • ",
+				highlight = "Comment",
+				prefix = " ",
+				placement = "above",
+				use_nerdfont = true,
+				render = "all",
+			},
 		},
 	},
 })
