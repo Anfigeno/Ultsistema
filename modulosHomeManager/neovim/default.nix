@@ -404,12 +404,6 @@ in
         }
 
         {
-          plugin = edgy-nvim;
-          type = "lua";
-          config = builtins.readFile ./complementos/edgy.lua;
-        }
-
-        {
           plugin = neoformat;
           type = "lua";
           config = builtins.readFile ./complementos/neoformat.lua;
