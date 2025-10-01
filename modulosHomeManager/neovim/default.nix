@@ -26,7 +26,7 @@ let
     };
 
   mestizo-nvim = deGithub {
-    rev = "def3ef8cbc86357e34dd920f50245c59c980bb80";
+    rev = "66e6889b5817123bce54c11170eb377f69798de4";
     ref = "main";
     repo = "anfigeno/mestizo.nvim";
   };
@@ -71,20 +71,6 @@ let
     rev = "386bcaa8aa7ae8703281afce4465ecfdb7c44e65";
     ref = "main";
     repo = "CRAG666/code_runner.nvim";
-  };
-
-  propio-fyler-nvim = deGithub {
-    rev = "2a53848c5c365a82389576c2b1ca31d9ff48a040";
-    ref = "main";
-    repo = "A7Lavinraj/fyler.nvim";
-    dependencies = with pkgs.vimPlugins; [
-      nvim-web-devicons
-      mini-icons
-    ];
-    nvimSkipModules = [
-      "fyler.explorer.ui"
-      "fyler.explorer"
-    ];
   };
 
   propio-lensline-nvim = deGithub {
@@ -143,10 +129,11 @@ in
           config = builtins.readFile ./complementos/lensline.lua;
         }
 
+        nvim-web-devicons
         {
-          plugin = propio-fyler-nvim;
+          plugin = neo-tree-nvim;
           type = "lua";
-          config = builtins.readFile ./complementos/fyler.lua;
+          config = builtins.readFile ./complementos/neo-tree.lua;
         }
 
         {
