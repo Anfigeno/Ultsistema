@@ -31,20 +31,20 @@ let
     repo = "anfigeno/mestizo.nvim";
   };
 
-  modes-nvim = deGithub {
+  propio-modes-nvim = deGithub {
     rev = "7c6ca20de4c9acb22ef06074e39fd2c021b99935";
     ref = "main";
     repo = "mvllow/modes.nvim";
   };
 
-  auto-lsp-nvim = deGithub {
+  propio-auto-lsp-nvim = deGithub {
     rev = "fa26c9768e111b43495faebdf1b02c91d36d6753";
     ref = "master";
     repo = "WieeRd/auto-lsp.nvim";
     dependencies = with pkgs.vimPlugins; [ nvim-lspconfig ];
   };
 
-  tiny-code-action-nvim = deGithub {
+  propio-tiny-code-action-nvim = deGithub {
     rev = "3204f45e4102788486f440259e09d50046081675";
     ref = "main";
     repo = "rachartier/tiny-code-action.nvim";
@@ -54,20 +54,20 @@ let
     ];
   };
 
-  direnv-nvim = deGithub {
+  propio-direnv-nvim = deGithub {
     rev = "a2f1264909463fd012b7b0b6bbfebc282c5d2834";
     ref = "main";
     repo = "NotAShelf/direnv.nvim";
   };
 
-  workspaces-nvim = deGithub {
+  propio-workspaces-nvim = deGithub {
     rev = "55a1eb6f5b72e07ee8333898254e113e927180ca";
     ref = "main";
     repo = "natecraddock/workspaces.nvim";
     dependencies = with pkgs.vimPlugins; [ telescope-nvim ];
   };
 
-  code-runner-nvim = deGithub {
+  propio-code-runner-nvim = deGithub {
     rev = "386bcaa8aa7ae8703281afce4465ecfdb7c44e65";
     ref = "main";
     repo = "CRAG666/code_runner.nvim";
@@ -87,7 +87,7 @@ let
     ];
   };
 
-  lensline-nvim = deGithub {
+  propio-lensline-nvim = deGithub {
     rev = "9ae1e4a4d47533dc5bba301e790dcda44ec62be6";
     ref = "main";
     repo = "oribarilan/lensline.nvim";
@@ -111,7 +111,7 @@ in
       ];
       plugins = with pkgs.vimPlugins; [
         {
-          plugin = lensline-nvim;
+          plugin = propio-lensline-nvim;
           type = "lua";
           config = builtins.readFile ./complementos/lensline.lua;
         }
@@ -152,12 +152,6 @@ in
             '';
         }
 
-        {
-          plugin = otter-nvim;
-          type = "lua";
-          config = builtins.readFile ./complementos/otter.lua;
-        }
-
         # {
         #   plugin = avante-nvim;
         #   type = "lua";
@@ -183,19 +177,19 @@ in
         }
 
         {
-          plugin = code-runner-nvim;
+          plugin = propio-code-runner-nvim;
           type = "lua";
           config = builtins.readFile ./complementos/code-runner.lua;
         }
 
         {
-          plugin = workspaces-nvim;
+          plugin = propio-workspaces-nvim;
           type = "lua";
           config = builtins.readFile ./complementos/workspaces.lua;
         }
 
         {
-          plugin = direnv-nvim;
+          plugin = propio-direnv-nvim;
           type = "lua";
           config = builtins.readFile ./complementos/direnv.lua;
         }
@@ -214,7 +208,7 @@ in
         }
 
         {
-          plugin = tiny-code-action-nvim;
+          plugin = propio-tiny-code-action-nvim;
           type = "lua";
           config = builtins.readFile ./complementos/tiny-code-action.lua;
         }
@@ -226,7 +220,7 @@ in
         }
 
         {
-          plugin = auto-lsp-nvim;
+          plugin = propio-auto-lsp-nvim;
           type = "lua";
           config = builtins.readFile ./complementos/auto-lsp.lua;
         }
@@ -378,7 +372,7 @@ in
         }
 
         {
-          plugin = modes-nvim;
+          plugin = propio-modes-nvim;
           type = "lua";
           config = builtins.readFile ./complementos/modes.lua;
         }
