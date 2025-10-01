@@ -27,4 +27,4 @@ require("neo-tree").setup({
 	},
 })
 
-vim.keymap.set("n", "<c-h>", "<cmd>Neotree toggle<cr>", { desc = "Alternar Neotree" })
+vim.keymap.set("n", "<c-n>", "<cmd>Neotree toggle<cr>", { desc = "Neotree: Alternar" })
