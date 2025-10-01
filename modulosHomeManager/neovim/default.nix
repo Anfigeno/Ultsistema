@@ -98,6 +98,14 @@ let
     ref = "main";
     repo = "adlrwbr/keep-split-ratio.nvim";
   };
+
+  propio-import-nvim = deGithub {
+    rev = "951075cc5622438f3837d46c9e12e779111ae72d";
+    ref = "main";
+    repo = "piersolenski/import.nvim";
+    dependencies = [ pkgs.vimPlugins.telescope-nvim ];
+    nvimSkipModules = [ "import.pickers.telescope" ];
+  };
 in
 {
   options.modulosHomeManager.neovim = {
@@ -116,6 +124,12 @@ in
         curl
       ];
       plugins = with pkgs.vimPlugins; [
+        {
+          plugin = propio-import-nvim;
+          type = "lua";
+          config = builtins.readFile ./complementos/import.lua;
+        }
+
         {
           plugin = propio-keep-split-ratio-nvim;
           type = "lua";
