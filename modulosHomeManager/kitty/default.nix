@@ -25,13 +25,13 @@ in
           shell = "${pkgs.fish}/bin/fish";
 
           disable_ligatures = "never";
-          font_size = 12;
+          font_size = 11;
           font_features = ''
             +calt
           '';
 
           modify_font = ''
-            cell_height 12px
+            cell_height 8px
           '';
 
           confirm_os_window_close = 0;
