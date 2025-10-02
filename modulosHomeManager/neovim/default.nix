@@ -111,6 +111,13 @@ in
       ];
       plugins = with pkgs.vimPlugins; [
         {
+          plugin = smear-cursor-nvim;
+          type = "lua";
+          config = # lua
+            ''require("smear_cursor").setup();'';
+        }
+
+        {
           plugin = propio-import-nvim;
           type = "lua";
           config = builtins.readFile ./complementos/import.lua;
