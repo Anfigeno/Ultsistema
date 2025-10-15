@@ -24,6 +24,9 @@
     cheese
     jetbrains.idea-community
     file-roller
+    totem
+    kdePackages.kdenlive
+    alsa-utils
   ];
 
   programs = {
