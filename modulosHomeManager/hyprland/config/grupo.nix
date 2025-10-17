@@ -23,9 +23,9 @@ in
     gaps_in = 5;
     gaps_out = 5;
     keep_upper_gap = false;
-    "col.active" = "rgb(${builtins.substring 1 (-1) tema.bordeActivo})";
-    "col.inactive" = "rgba(${builtins.substring 1 (-1) tema.bordeInactivo}80)";
-    "col.locked_active" = "rgb(${builtins.substring 1 (-1) tema.bordeActivo})";
-    "col.locked_inactive" = "rgba(${builtins.substring 1 (-1) tema.bordeInactivo}80)";
+    "col.active" = "rgb(${builtins.substring 1 (-1) tema.fondoClaro})";
+    "col.inactive" = "rgba(${builtins.substring 1 (-1) tema.fondoClaro}80)";
+    "col.locked_active" = "rgb(${builtins.substring 1 (-1) tema.fondoClaro})";
+    "col.locked_inactive" = "rgba(${builtins.substring 1 (-1) tema.fondoClaro}80)";
   };
 }

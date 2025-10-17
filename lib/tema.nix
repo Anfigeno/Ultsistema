@@ -5,6 +5,7 @@ in {
 
   texto = mestizo.tope;
 
+  fondoClaro = mestizo.base2;
   fondo = mestizo.base;
 
   bordeActivo = mestizo.tope_3;
