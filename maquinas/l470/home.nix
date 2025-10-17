@@ -2,6 +2,7 @@
 
 {
   imports = [
+    inputs.stylix.homeModules.stylix
     {
       config.modulosHomeManager = {
         quickshell.activar = true;

@@ -13,10 +13,20 @@
       url = "github:0xc000022070/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    stylix = {
+      url = "github:nix-community/stylix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
-    { nixpkgs, home-manager, ... }@inputs:
+    {
+      nixpkgs,
+      home-manager,
+      stylix,
+      ...
+    }@inputs:
     let
       system = "x86_64-linux";
       pkgs = import nixpkgs {
@@ -24,7 +34,10 @@
         config.allowUnfree = true;
       };
 
-      maquinas = [ "l470" "h81m" ];
+      maquinas = [
+        "l470"
+        "h81m"
+      ];
       usuario = "anfitrion";
     in
     {
