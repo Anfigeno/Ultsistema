@@ -42,7 +42,7 @@ in
         # css
         ''
           window {
-            background-color: ${tema.fondo};
+            background-color: ${tema.fondoClaro};
             padding: 50px;
           }
 
