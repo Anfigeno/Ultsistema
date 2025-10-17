@@ -1,13 +1,13 @@
 let
 
-  orchis = import ../../../lib/orchis.nix;
+  tema = import ../../../lib/tema.nix;
 in
 {
   auto_group = true;
-  "col.border_active" = "rgb(${builtins.substring 1 (-1) orchis.grey."600"})";
-  "col.border_inactive" = "rgb(${builtins.substring 1 (-1) orchis.grey."600"})";
-  "col.border_locked_active" = "rgb(${builtins.substring 1 (-1) orchis.grey."550"})";
-  "col.border_locked_inactive" = "rgb(${builtins.substring 1 (-1) orchis.grey."550"})";
+  "col.border_active" = "rgb(${builtins.substring 1 (-1) tema.bordeActivo})";
+  "col.border_inactive" = "rgb(${builtins.substring 1 (-1) tema.bordeInactivo})";
+  "col.border_locked_active" = "rgb(${builtins.substring 1 (-1) tema.bordeActivo})";
+  "col.border_locked_inactive" = "rgb(${builtins.substring 1 (-1) tema.bordeInactivo})";
 
   groupbar = {
     enabled = true;
@@ -23,9 +23,9 @@ in
     gaps_in = 5;
     gaps_out = 5;
     keep_upper_gap = false;
-    "col.active" = "rgb(${builtins.substring 1 (-1) orchis.grey."700"})";
-    "col.inactive" = "rgba(${builtins.substring 1 (-1) orchis.grey."700"}80)";
-    "col.locked_active" = "rgb(${builtins.substring 1 (-1) orchis.grey."700"})";
-    "col.locked_inactive" = "rgba(${builtins.substring 1 (-1) orchis.grey."700"}80)";
+    "col.active" = "rgb(${builtins.substring 1 (-1) tema.bordeActivo})";
+    "col.inactive" = "rgba(${builtins.substring 1 (-1) tema.bordeInactivo}80)";
+    "col.locked_active" = "rgb(${builtins.substring 1 (-1) tema.bordeActivo})";
+    "col.locked_inactive" = "rgba(${builtins.substring 1 (-1) tema.bordeInactivo}80)";
   };
 }

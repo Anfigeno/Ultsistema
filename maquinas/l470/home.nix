@@ -27,6 +27,7 @@
     totem
     kdePackages.kdenlive
     alsa-utils
+    qbittorrent
   ];
 
   programs = {

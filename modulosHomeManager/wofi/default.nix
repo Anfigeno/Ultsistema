@@ -37,29 +37,24 @@ in
       };
       style =
         let
-          orchis = import ../../lib/orchis.nix;
+          tema = import ../../lib/tema.nix;
         in
         # css
         ''
           window {
-            background-color: ${orchis.grey."700"};
+            background-color: ${tema.fondo};
             padding: 50px;
           }
 
           #input {
             padding: 10px 20px;
-            background-color: ${orchis.grey."650"};
-            color: ${orchis.white};
+            color: ${tema.texto};
             border-radius: 20px;
             margin: 20px 15px;
           }
 
-          #input:focus {
-            border-color: ${orchis.purple.light};
-          }
-
-          #inner-box {
-            background-color: ${orchis.white};
+          #input:selected {
+            border-color: ${tema.primario};
           }
 
           #img {
@@ -68,6 +63,7 @@ in
 
           #entry {
             border-radius: 0;
+            color: ${tema.texto}
           }
 
           #text:selected,
@@ -76,8 +72,8 @@ in
           }
 
           #entry:selected {
-            background-color: ${orchis.purple.light};
-            color : ${orchis.white};
+            background-color: ${tema.primario};
+            color : ${tema.fondo};
           }
         '';
     };
