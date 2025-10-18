@@ -31,7 +31,7 @@ in
           '';
 
           modify_font = ''
-            cell_height 8px
+            cell_height 4px
           '';
 
           confirm_os_window_close = 0;
