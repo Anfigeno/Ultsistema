@@ -6,6 +6,7 @@
     {
       config.modulosHomeManager = {
         quickshell.activar = true;
+        zen.activar = true;
         entornoHyprland.activar = true;
         entornoDeDesarrollo.activar = true;
       };
@@ -28,7 +29,6 @@
     kdePackages.kdenlive
     alsa-utils
     qbittorrent
-    floorp
   ];
 
   programs = {
