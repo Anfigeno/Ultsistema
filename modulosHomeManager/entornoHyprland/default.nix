@@ -16,6 +16,7 @@ in
 
   config.modulosHomeManager = lib.mkIf cfg.activar {
     hyprland.activar = true;
+    dunst.activar = true;
     xdg.activar = true;
     stylix.activar = true;
     wofi.activar = true;

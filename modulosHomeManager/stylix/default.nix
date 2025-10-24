@@ -22,6 +22,7 @@ in
         kitty.enable = false;
         wofi.enable = false;
         neovim.enable = false;
+        dunst.enable = false;
       };
       fonts = {
         sizes = {

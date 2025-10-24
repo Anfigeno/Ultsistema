@@ -1,5 +1,6 @@
 {
   imports = [
+    ./dunst
     ./stylix
     ./quickshell
     ./zen
