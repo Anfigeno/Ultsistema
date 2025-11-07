@@ -27,21 +27,4 @@
 
   programs.steam.enable = true;
   hardware.steam-hardware.enable = true;
-
-  networking.networkmanager = {
-    enable = true;
-    settings = {
-      connection-wifi = {
-        match-device = "type:wifi";
-        "ipv4.route-metric" = 100;
-        "ipv6.route-metric" = 100;
-      };
-
-      connection-ethernet = {
-        match-device = "type:ethernet";
-        "ipv4.route-metric" = 400;
-        "ipv6.route-metric" = 400;
-      };
-    };
-  };
 }

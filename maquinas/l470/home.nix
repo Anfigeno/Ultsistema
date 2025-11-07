@@ -29,10 +29,10 @@
     kdePackages.kdenlive
     alsa-utils
     qbittorrent
+    discord
   ];
 
   programs = {
-    vesktop.enable = true;
     obs-studio.enable = true;
   };
 
