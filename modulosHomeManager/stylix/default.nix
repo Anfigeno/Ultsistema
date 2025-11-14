@@ -33,12 +33,12 @@ in
         };
 
         serif = {
-          package = pkgs.ubuntu_font_family;
+          package = pkgs.ubuntu-classic;
           name = "Ubuntu";
         };
 
         sansSerif = {
-          package = pkgs.ubuntu_font_family;
+          package = pkgs.ubuntu-classic;
           name = "Ubuntu";
         };
 
@@ -48,7 +48,7 @@ in
         };
 
         emoji = {
-          package = pkgs.noto-fonts-emoji;
+          package = pkgs.noto-fonts-color-emoji;
           name = "Noto Color Emoji";
         };
       };

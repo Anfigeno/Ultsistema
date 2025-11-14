@@ -17,7 +17,7 @@ in
       enable = true;
       font = {
         name = "Ubuntu";
-        package = pkgs.ubuntu_font_family;
+        package = pkgs.ubuntu-classic;
       };
 
       theme = {

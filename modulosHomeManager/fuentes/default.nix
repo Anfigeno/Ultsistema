@@ -10,8 +10,8 @@ in {
       nerd-fonts.iosevka
       iosevka
       monaspace
-      ubuntu_font_family
-      noto-fonts-emoji
+      ubuntu-classic
+      noto-fonts-color-emoji
       noto-fonts
       google-fonts
       dejavu_fonts
