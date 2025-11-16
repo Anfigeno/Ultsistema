@@ -54,6 +54,16 @@ let
     ];
   };
 
+  propio-tiny-inline-diagnostic-nvim = deGithub {
+    rev = "71f998696a4d63a1fa42a6c70d5931a2001e485b";
+    ref = "main";
+    repo = "rachartier/tiny-inline-diagnostic.nvim";
+    dependencies = with pkgs.vimPlugins; [
+      plenary-nvim
+      snacks-nvim
+    ];
+  };
+
   propio-direnv-nvim = deGithub {
     rev = "a2f1264909463fd012b7b0b6bbfebc282c5d2834";
     ref = "main";
@@ -259,7 +269,7 @@ in
         }
 
         {
-          plugin = tiny-inline-diagnostic-nvim;
+          plugin = propio-tiny-inline-diagnostic-nvim;
           type = "lua";
           config = builtins.readFile ./complementos/tiny-inline-diagnostic.lua;
         }
@@ -390,12 +400,6 @@ in
           plugin = mini-nvim;
           type = "lua";
           config = builtins.readFile ./complementos/mini.lua;
-        }
-
-        {
-          plugin = hlchunk-nvim;
-          type = "lua";
-          config = builtins.readFile ./complementos/hlchunk.lua;
         }
 
         {

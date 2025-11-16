@@ -30,6 +30,8 @@ in
             +calt
           '';
 
+          window_padding_width = 8;
+
           modify_font = ''
             cell_height 4px
           '';
