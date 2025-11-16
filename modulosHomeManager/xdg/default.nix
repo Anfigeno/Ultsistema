@@ -36,19 +36,6 @@ in
       stateHome = "${config.home.homeDirectory}/.local/state";
 
       desktopEntries = {
-        zen-perfiles = lib.mkIf config.modulosHomeManager.zen.activar {
-          name = "Zen Perfiles";
-          comment = "Elige tu perfil y abre Zen Browser";
-          exec = "zen-beta -p";
-          icon = "zen-beta";
-          mimeType = [
-            "text/html"
-            "x-scheme-handler/http"
-            "x-scheme-handler/https"
-            "x-scheme-handler/about"
-            "x-scheme-handler/unknown"
-          ];
-        };
         neovim = lib.mkIf config.modulosHomeManager.neovim.activar {
           name = "Neovim";
           genericName = "Text Editor";

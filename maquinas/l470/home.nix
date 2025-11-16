@@ -2,11 +2,9 @@
 
 {
   imports = [
-    inputs.stylix.homeModules.stylix
     {
       config.modulosHomeManager = {
         quickshell.activar = false;
-        zen.activar = true;
         entornoHyprland.activar = true;
         entornoDeDesarrollo.activar = true;
       };

@@ -24,6 +24,8 @@ in
     services.swww.enable = true; # Utilidad de fondo de pantalla
     services.amberol.enable = true; # Reproductor de música minimalista
 
+    programs.firefox.enable = true;
+
     # XDG
     xdg.portal = {
       enable = true;

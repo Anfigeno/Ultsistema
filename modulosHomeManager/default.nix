@@ -1,9 +1,7 @@
 {
   imports = [
     ./dunst
-    ./stylix
     ./quickshell
-    ./zen
     ./eww
     ./wofi
     ./hyprland

@@ -7,7 +7,6 @@
 
 {
   imports = [
-    inputs.zen-browser.homeModules.beta
     (import ./${maquina}/home.nix { inherit pkgs inputs; })
     ../modulosHomeManager
   ];

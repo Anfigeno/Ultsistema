@@ -16,12 +16,12 @@ in
     gtk = {
       enable = true;
       font = {
-        name = "Ubuntu";
-        package = pkgs.ubuntu-classic;
+        name = "Iosevka";
+        package = pkgs.iosevka;
       };
 
       theme = {
-        name = "Orchis-Purple";
+        name = "Orchis-Red-Light";
         package = pkgs.orchis-theme;
       };
 

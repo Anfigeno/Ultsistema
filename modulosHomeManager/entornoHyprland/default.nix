@@ -18,9 +18,10 @@ in
     hyprland.activar = true;
     dunst.activar = true;
     xdg.activar = true;
-    stylix.activar = true;
     wofi.activar = true;
     eww.activar = true;
+    gtk.activar = true;
+    qt.activar = true;
     configuracionExtraEntornoHyprland.activar = true;
   };
 }
