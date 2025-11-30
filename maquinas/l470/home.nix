@@ -28,6 +28,7 @@
     alsa-utils
     qbittorrent
     discord
+    discord-ptb
   ];
 
   programs = {
