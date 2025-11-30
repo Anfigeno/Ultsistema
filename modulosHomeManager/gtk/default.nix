@@ -29,6 +29,29 @@ in
         name = "Reversal";
         package = pkgs.reversal-icon-theme;
       };
+
+      cursorTheme = {
+        name = "Bibata-Modern-Amber";
+        package = pkgs.bibata-cursors;
+      };
+
+      # gtk3.extraConfig = {
+      #   "gtk-cursor-theme-name" = "Bibata-Modern-Amber";
+      # };
+      #
+      # gtk4.extraConfig = {
+      #   Settings = ''
+      #     gtk-cursor-theme-name=Bibata-Modern-Amber
+      #   '';
+      # };
+    };
+
+    home.pointerCursor = {
+      gtk.enable = true;
+      x11.enable = true;
+      package = pkgs.bibata-cursors;
+      name = "Bibata-Modern-Amber";
+      size = 16;
     };
   };
 }
