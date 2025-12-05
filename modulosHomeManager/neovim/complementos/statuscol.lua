@@ -3,6 +3,7 @@ local builtin = require("statuscol.builtin")
 require("statuscol").setup({
 	thousands = true,
 	segments = {
+    { text = { "%s", " " }, click = "v:lua.ScSa" },
 		{
 			text = { builtin.lnumfunc, " " },
 			condition = { true, builtin.not_empty },
