@@ -1,4 +1,5 @@
 let mestizo = import ../../lib/mestizo.nix;
+  tema = import ../../lib/tema.nix;
 in {
   # Colores básicos
   background = mestizo.base;
@@ -14,8 +15,8 @@ in {
   url_color = mestizo.tope_2;
 
   # Colores de bordes de ventana de Kitty
-  active_border_color = mestizo.base3;
-  inactive_border_color = mestizo.base1;
+  active_border_color = tema.bordeActivo;
+  inactive_border_color = tema.bordeInactivo;
 
   # Colores de barra de título del SO
   wayland_titlebar_color = mestizo.base;

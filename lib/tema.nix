@@ -8,6 +8,6 @@ in {
   fondoClaro = mestizo.base2;
   fondo = mestizo.base;
 
-  bordeActivo = mestizo.tope_3;
-  bordeInactivo = mestizo.base3;
+  bordeActivo = mestizo.base3;
+  bordeInactivo = mestizo.base2;
 }
