@@ -1,10 +1,8 @@
 local fyler = require("fyler")
 
-fyler.setup({
-	icon_provider = "mini_icons",
-})
+fyler.setup()
 
-vim.keymap.set("n", "<C-h>", function()
+vim.keymap.set("n", "<C-n>", function()
 	fyler.toggle({
 		kind = "split_left",
 	})

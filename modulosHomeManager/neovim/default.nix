@@ -26,7 +26,7 @@ let
     };
 
   mestizo-nvim = deGithub {
-    rev = "66e6889b5817123bce54c11170eb377f69798de4";
+    rev = "7b131e9e792dc2c98ab43c76463b241464fc5cdd";
     ref = "main";
     repo = "anfigeno/mestizo.nvim";
   };
@@ -108,6 +108,12 @@ let
     ref = "main";
     repo = "OXY2DEV/markview.nvim";
   };
+
+  propio-fyler-nvim = deGithub {
+    rev = "16176d6aacd4673f041832fac8ae857c537666c7";
+    ref = "main";
+    repo = "A7Lavinraj/fyler.nvim";
+  };
 in
 {
   options.modulosHomeManager.neovim = {
@@ -126,6 +132,19 @@ in
         curl
       ];
       plugins = with pkgs.vimPlugins; [
+        nvim-web-devicons
+        {
+          plugin = mini-icons;
+          type = "lua";
+          config = builtins.readFile ./complementos/mini-icons.lua;
+        }
+
+        {
+          plugin = propio-fyler-nvim;
+          type = "lua";
+          config = builtins.readFile ./complementos/fyler.lua;
+        }
+
         {
           plugin = smear-cursor-nvim;
           type = "lua";
@@ -150,13 +169,6 @@ in
           plugin = propio-lensline-nvim;
           type = "lua";
           config = builtins.readFile ./complementos/lensline.lua;
-        }
-
-        nvim-web-devicons
-        {
-          plugin = neo-tree-nvim;
-          type = "lua";
-          config = builtins.readFile ./complementos/neo-tree.lua;
         }
 
         {
