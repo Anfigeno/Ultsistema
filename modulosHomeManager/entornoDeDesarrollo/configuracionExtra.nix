@@ -31,6 +31,7 @@ in
       nixfmt-classic
     ];
 
+    programs.bun.enable = true;
     programs.eza.enable = true;
     programs.fzf = {
       enable = true;
