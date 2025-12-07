@@ -23,6 +23,12 @@
     displayManager.gdm.enable = true;
     gvfs.enable = true;
     upower.enable = true;
+    pipewire = {
+      enable = true;
+      alsa.enable = true;
+      alsa.support32Bit = true;
+      pulse.enable = true;
+    };
   };
 
   programs.steam.enable = true;
