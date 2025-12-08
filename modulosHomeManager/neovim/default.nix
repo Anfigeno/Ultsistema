@@ -26,12 +26,14 @@ in
       plugins =
         let
           complementos = [
+            "supermaven"
+            "diagnostic-toggle"
             "mestizo"
             "fyler"
             "smear-cursor"
             "modes"
             "keep-split-ratio"
-            "lensline"
+            # "lensline"
             "ts-autotag"
             "wich-key"
             "lazydev"
@@ -45,7 +47,7 @@ in
             "tiny-code-action"
             "navic"
             "auto-lsp"
-            "tiny-inline-diagnostic"
+            # "tiny-inline-diagnostic"
             "trouble"
             "rest"
             "lualine"

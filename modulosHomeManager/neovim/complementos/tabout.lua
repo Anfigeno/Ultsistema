@@ -1,4 +1,4 @@
 require("tabout").setup({
-	tabkey = "<c-l>",
+	tabkey = "<Tab>",
   backwards_tabkey = "<c-h>",
 })

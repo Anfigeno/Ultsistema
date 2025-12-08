@@ -1,7 +1,11 @@
 { deGithub, pkgs }:
 
-{
-  plugin = pkgs.vimPlugins.hover-nvim;
-  type = "lua";
-  config = builtins.readFile ./hover.lua;
-}
+with pkgs.vimPlugins;
+[
+  nvim-lspconfig
+  {
+    plugin = hover-nvim;
+    type = "lua";
+    config = builtins.readFile ./hover.lua;
+  }
+]
