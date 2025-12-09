@@ -18,7 +18,7 @@ in
     programs.fish = {
       enable = true;
       plugins = import ./plugins.nix { inherit pkgs; };
-      shellInit = import ./shellInit.nix { inherit pkgs; };
+      shellInit = import ./shellInit.nix { inherit pkgs config; };
       interactiveShellInit = import ./interactiveShellInit.nix;
     };
   };

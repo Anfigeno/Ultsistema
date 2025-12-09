@@ -1,7 +1,15 @@
-{ pkgs }:
+{
+  pkgs,
+  config,
+}:
 # fish
+let
+  envoltorioDeYazi =
+    if config.modulosHomeManager.yazi.activar then import ./scripts/yazi.nix { inherit pkgs; } else "";
+in
 ''
   ${import ./scripts/saludo.nix { inherit pkgs; }}
+  ${envoltorioDeYazi}
 
   set -g tide_os_color brwhite
   set -g tide_os_bg_color red

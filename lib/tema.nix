@@ -4,6 +4,7 @@ in {
   primario = mestizo.rojo;
 
   texto = mestizo.tope;
+  textoInactivo = mestizo.tope_2;
 
   fondoClaro = mestizo.base2;
   fondo = mestizo.base;
