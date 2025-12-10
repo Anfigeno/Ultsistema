@@ -37,7 +37,6 @@ in
       enable = true;
       enableFishIntegration = true;
     };
-    programs.bat.enable = true;
     programs.ripgrep.enable = true;
     programs.jq.enable = true;
     programs.btop.enable = true;

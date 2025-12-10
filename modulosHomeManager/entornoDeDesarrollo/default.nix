@@ -22,6 +22,7 @@ in
     git.activar = true;
     zellij.activar = true;
     yazi.activar = true;
+    bat.activar = true;
     configuracionExtraDesarrollo.activar = true;
   };
 }

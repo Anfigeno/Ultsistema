@@ -19,8 +19,9 @@ in
   set -g tide_pwd_color_truncated_dirs brblack
 
   set -Ux LS_COLORS "di=91:ln=36:so=36:pi=32:ex=32:bd=30;46:cd=30;43:su=30;41:sg=30;46:tw=30;42:ow=30;43"
-  set fzf_preview_dir_cmd eza --icons always --color always --long --git --no-user --no-time --no-permissions --no-filesize --all --sort type
+
   set -Ux FZF_DEFAULT_OPTS '
+    --preview-window=70%
     --color=fg:#FF808C,fg+:#C1C2FB,bg:#1C1C26,bg+:#2b3246
     --color=hl:#FF808C,hl+:#ffe780,info:#8eeda1,marker:#F27AFF
     --color=prompt:#6ae4fc,spinner:#af5fff,pointer:#ff5263,header:#5fd7ff
@@ -30,4 +31,9 @@ in
     --border="rounded" --border-label="" --preview-window="border-rounded" --prompt="> "
     --marker=">" --pointer="◆" --separator="─" --scrollbar="│"
     --layout="reverse" --info="right"'
+
+  set -Ux BAT_THEME "mestizo"
+
+  set fzf_preview_dir_cmd eza --icons always --color always --long --git --no-user --no-time --no-permissions --no-filesize --all --sort type
+  set -Ux fzf_diff_highlighter ${pkgs.delta}/bin/delta --paging=never
 ''

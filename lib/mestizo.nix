@@ -27,4 +27,14 @@
   base_1 = "#191921";
   base_2 = "#131418";
   base_3 = "#0c0c0e";
+
+  especial = {
+    rojo_fondo = "#35222d";
+    rojo_fondo_2 = "#4e2834";
+    verde_fondo = "#293334";
+    verde_fondo_2 = "#354a41";
+    amarillo_fondo = "#373534";
+    cian_fondo = "#263541";
+    azul_fondo = "#2a2b42";
+  };
 }
