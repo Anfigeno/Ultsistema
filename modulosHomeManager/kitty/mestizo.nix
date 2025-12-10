@@ -42,7 +42,7 @@ in {
 
   # brillantes
   color8 = mestizo.base3;
-  color9 = mestizo.rojo;
+  color9 = mestizo.rosa;
   color10 = mestizo.verde;
   color11 = mestizo.amarillo;
   color12 = mestizo.azul;
