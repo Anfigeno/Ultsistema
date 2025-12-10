@@ -17,6 +17,12 @@ in
     home.packages = with pkgs; [
       nautilus
       nautilus-open-any-terminal
+      loupe
+      totem
+      gedit
+      file-roller
+      feh
+      mpv
       brightnessctl
       wl-clipboard
     ];

@@ -13,17 +13,12 @@
 
   home.packages = with pkgs; [
     wpsoffice
-    gedit
     vscode
-    loupe
-    vlc
     prismlauncher
     wasistlos
     glib
     cheese
     jetbrains.idea-community
-    file-roller
-    totem
     kdePackages.kdenlive
     alsa-utils
     qbittorrent

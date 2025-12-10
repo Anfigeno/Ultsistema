@@ -13,7 +13,8 @@
       );
 
       reproductorDeMusica = "io.bassi.Amberol.desktop";
-      reproductorDeVideo = "org.gnome.Totem.desktop";
+      reproductorDeVideo = "mpv.desktop";
+      visorDeImagenes = "feh.desktop";
       exploradorDeArchivos = "org.gnome.Nautilus.desktop";
       manejadorDeArchivosComprimidos = "org.gnome.FileRoller.desktop";
       editorDeTexto = "neovim.desktop";
@@ -67,6 +68,25 @@
         "video/x-mpeg2"
         "video/x-nsv"
         "video/x-totem-stream"
+      ];
+      imagenesMimeTypes = [
+        "image/bmp"
+        "image/gif"
+        "image/jpeg"
+        "image/jpg"
+        "image/pjpeg"
+        "image/png"
+        "image/tiff"
+        "image/webp"
+        "image/x-bmp"
+        "image/x-pcx"
+        "image/x-png"
+        "image/x-portable-anymap"
+        "image/x-portable-bitmap"
+        "image/x-portable-graymap"
+        "image/x-portable-pixmap"
+        "image/x-tga"
+        "image/x-xbitmap"
       ];
       comprimidosMimeTypes = [
         "application/zip"
@@ -207,5 +227,6 @@
     // asignarAtributos audioMimeApps reproductorDeMusica
     // asignarAtributos videoMimeTypes reproductorDeVideo
     // asignarAtributos comprimidosMimeTypes manejadorDeArchivosComprimidos
-    // asignarAtributos programacionMimeTypes editorDeTexto;
+    // asignarAtributos programacionMimeTypes editorDeTexto
+    // asignarAtributos imagenesMimeTypes visorDeImagenes;
 }
