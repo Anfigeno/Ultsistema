@@ -19,7 +19,7 @@ in
       systemd.variables = [ "--all" ];
       enable = true;
       settings = {
-        bind = import ./config/atajos.nix { inherit pkgs; };
+        bind = import ./config/atajos { inherit pkgs config; };
         windowrule = import ./config/reglasDeVentana.nix { inherit lib; };
         exec-once = import ./config/alIniciar.nix { inherit pkgs; };
         exec = import ./config/alRecargar.nix { inherit pkgs; };

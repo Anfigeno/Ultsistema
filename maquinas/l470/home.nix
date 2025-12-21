@@ -4,7 +4,6 @@
   imports = [
     {
       config.modulosHomeManager = {
-        quickshell.activar = false;
         entornoHyprland.activar = true;
         entornoDeDesarrollo.activar = true;
       };

@@ -26,6 +26,7 @@ in
       plugins =
         let
           complementos = [
+            "base16"
             "supermaven"
             "diagnostic-toggle"
             "mestizo"

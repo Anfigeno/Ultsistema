@@ -22,6 +22,7 @@ in
     eww.activar = true;
     gtk.activar = true;
     qt.activar = true;
+    quickshell.activar = true;
     configuracionExtraEntornoHyprland.activar = true;
   };
 }

@@ -1,10 +1,11 @@
-{ pkgs }:
+{ pkgs, config }:
 let
-  audio = import ./scripts/audio.nix { inherit pkgs; };
+  atajosDeQuickshell =
+    if config.modulosHomeManager.quickshell.activar then (import ./atajosDeQuickshell.nix) else [ ];
 in
-[
+atajosDeQuickshell
+++ [
   "SUPER, RETURN, exec, ${pkgs.kitty}/bin/kitty"
-  "SUPER, SPACE, exec, ${pkgs.wofi}/bin/wofi --show drun"
   "SUPER, e, exec, ${pkgs.nautilus}/bin/nautilus"
   ", Print, exec, ${pkgs.grim}/bin/grim - | ${pkgs.wl-clipboard}/bin/wl-copy"
   ''SHIFT, Print, exec, ${pkgs.grim}/bin/grim -g "$(${pkgs.slurp}/bin/slurp -d)" - | ${pkgs.wl-clipboard}/bin/wl-copy''
@@ -27,9 +28,9 @@ in
   "SUPER, l, movefocus, r"
 
   # Volumen
-  ", XF86AudioRaiseVolume, exec, ${audio}/bin/control-de-volumen aumentar"
-  ", XF86AudioLowerVolume, exec, ${audio}/bin/control-de-volumen reducir"
-  ", XF86AudioMute, exec, ${audio}/bin/control-de-volumen silenciar"
+  # ", XF86AudioRaiseVolume, exec, ${audio}/bin/control-de-volumen aumentar"
+  # ", XF86AudioLowerVolume, exec, ${audio}/bin/control-de-volumen reducir"
+  # ", XF86AudioMute, exec, ${audio}/bin/control-de-volumen silenciar"
 
   # Multimedia
   ", XF86AudioPlay, exec, ${pkgs.playerctl}/bin/playerctl play-pause"
